@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web Page</title>
+  <style>
+    .navbar {
+  overflow: hidden;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+    a:link {
+        color: rgb(0, 0, 0);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited 
+    {
+        color: rgb(0, 51, 123);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    body {
+      background-image: url('marble.jpg');
+      text-align: center;
+    }
+
+    #h3 {
+      color: aliceblue;
+    }
+
+    #h31 {
+      color: rgb(0, 0, 0);
+    }
+
+    #img1 {
+      border-radius: 20%;
+    }
+
+    #img {
+      border-radius: 50%;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .text {
+      padding-left: 20px;
+    }
+
+    font {
+      color: aliceblue;
+    }
+
+    button {
+      background-color: rgb(122, 122, 122);
+      color: white;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .edubox {
+      border: 4px solid rgb(255, 255, 255);
+      padding: 10px;
+    }
+
+    h2 {
+      font-size: xx-large;
+    }
+
+    .mainc {
+      font-size: larger;
+    }
+
+    .pclass {
+      color: green;
+    }
+    #img12
+    {
+      float:left;
+      border-radius: 20%;
+    }
+
+    #si {
+      font-size: 16px;
+    }
+
+    #abc {
+      color: red;
+    }
+
+    ul,
+    ol {
+      list-style-type: none;
+      margin-left: 0;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      var documentE1 = $(document),
+          fadeElem = $('.fade-scroll');
+  
+      documentE1.on('scroll', function () {
+        var currScrollPos = documentE1.scrollTop();
+        fadeElem.each(function () {
+          var $this = $(this),
+              elemOffsetTop = $this.offset().top;
+          if (currScrollPos > elemOffsetTop) {
+            $this.css('opacity', 1 - (currScrollPos - elemOffsetTop) / 250);
+          } else {
+            $this.css('opacity', 1);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+<body style="background-color: silver; font-size: 33px;">
+
+  <font face="arial, helvetica" size="3" color="black">
+    <br>
+    <br>
+    <h2> Welcome to my Webpage !</h2>
+    <hr size="5px">
+    <div class="navbar">
+    <a >
+      <h3 id="h31" style="text-align:center;background-color: rgb(255, 255, 255);">
+        
+        <br>
+        <ul style="display: inline;">
+            
+            <li style="display: inline;"><a href="#About Me">About Me</a>
+            <li style="display: inline;"><a href="#College">College</a>
+            <li style="display: inline;"><a href="#Schooling">Schooling</a>
+            <li style="display: inline;"><a href="#Hobbies">Achievements</a>
+                
+        </ul>
+        <p><br></p>
+      </h3>
+    </a>
+    </div>
+    
+    <header>
+    <h1 class="fade-scroll">
+        <hr width="30%">PORTFOLIO
+        <br>
+        <hr width="30%">
+      </h1>
+    </header>
+    <hr size="5px">
+    <a id="About Me"></a>
+    <h2 class="fade-scroll">
+      <hr width="30%">ABOUT ME
+      <br>
+      <hr width="30%">
+    </h2>
+    <div class="fade-scroll">
+      <div class="edubox">
+        <div class="container">
+          <div class="image">
+            
+            <button id="img" onclick="window.location.href='https://in.linkedin.com/in/anant-jain-9bb81a212';"><br><img id="img" src="anant.jpeg" width="220" height="250" align="left"><br>Click Me</button><br>
+          </div>
+          <div class="text">
+            <a>
+              <h3>I am Anant Jain, currently pursuing a B.Tech program at VIT Vellore.
+                <br> Passionate about technology and innovation,
+                <br> I strive for academic excellence and look forward to contributing meaningfully to the field of Engineering.
+              </h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a id="College"></a>
+    <h2 class="fade-scroll">
+      <hr width="30%">EDUCATION
+      <br>
+      <hr width="30%">
+    </h2>
+    <div class="fade-scroll">
+      <div class="edubox">
+        <table>
+          <tr>
+            <td>
+              <button id="img1" onclick="window.location.href='https://vit.ac.in/';"><br><img id="img1" src="vit.jpg" width="500" height="300" alt="VIT quality/"><br>Click Me</button><br>
+              <a id="h3" href="https://vit.ac.in/">VIT Website</a>
+            </td>
+            <td>
+              <h3 id="h3">I am pursuing B-Tech from VIT Vellore.
+                <br> VIT is one of the top-ranked private universities in India.
+                <br>
+                <p id="abc">
+                  There are more than 40000 students in the University, pursuing various courses such as<br></p>
+                <ol style="float:center; " type="I">
+                  <li>Engineering</li>
+                  <li>Medicine</li>
+                  <li>Architecture</li>
+                </ol>
+              </h3>
+              <h3 id="h3">
+                <a>
+                  In this January, I embarked on my fourth semester, immersing myself in a diverse array of subjects.
+                  <br> The semester's academic landscape includes the exploration of Computer Architecture, Theory of Computation,
+                  <br> unraveling the mysteries of Probability and Statistics, and navigating the realms of Design and Analysis of Algorithms.
+                </a>
+              </h3>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <a id="Schooling"></a>
+    <h2 class="fade-scroll">
+      <hr width="30%">SCHOOLING
+      <br>
+      <hr width="30%">
+    </h2>
+    <div class="fade-scroll">
+      <div class="edubox">
+        <table>
+          <tr>
+            <td>
+              <center>
+                
+                <button id="img1" onclick="window.location.href='https://www.krmangalamgurgaon.com/';"><br><img id="img1" src="krm.jpg" width="500" height="300" alt="VIT quality/"><br>Click Me</button><br>
+              </center>
+            </td>
+            <td>
+              <a>
+                <h3 id="h3" style="text-align:center;">
+                  I completed my schooling at K.R.Mangalam World School, Gurugram.<br>
+                  It stands proudly as one of the best schools in the city.<br>
+                  I opted for Physics, Chemistry, and Mathematics as my stream in class 11th, with Computer Science as my 5th subject.<br>
+                  In the domain of Computer Science,<br> I acquired proficiency in Python, a skill that proved invaluable in my first year of college.<br>
+                  I achieved a remarkable 92.4% in my 12th-grade board exams.<br>
+                  I also mastered the art of fluent German during my time at school.<br>
+                  Our school is renowned for its incredible Foreign Exchange Programme, exemplified by initiatives like:
+                  <ol>
+                    <li>German Exchange</li>
+                    <li>French Exchange</li>
+                    <li>Japanese Exchange</li>
+                  </ol>
+                </h3>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <h2 class="fade-scroll">
+      <a id="Hobbies"></a>
+      <hr width="30%">ACHIEVEMENTS
+      <br>
+      <hr width="30%">
+    </h2>
+    <div class="fade-scroll">
+      <div class="edubox">
+        <table style="width:100%;color:rgb(0, 0, 0);">
+          <tr>
+            <td>
+              <ul style="display: inline;">
+                <li style="display: inline;">
+                  <img id="img12" src="yourname.jpg" width="150" height="200" alt="VIT quality/">
+                </li>
+                <li style="display: inline;">
+                  <img id="img12" src="shooting1.jpg" width="250" height="200" alt="VIT quality/">
+                </li>
+              </ul>
+            </td>
+            <td>
+              <h3 id="h3" style="text-align:center;">
+                From my early years, I have dedicated significant attention to my extracurricular activities.
+                <br>I possess a profound interest in music and can play three different instruments.
+                <br>
+                <ul style="display: inline;">
+                  <li style="display: inline;">
+                    <img id="img" src="drums.jpg" width="50" height="50" alt="VIT quality/" style="border-radius: 50%;">
+                  </li>
+                  <li style="display: inline;">
+                    <img id="img" src="guitar.jpg" width="50" height="50" alt="VIT quality/">
+                  </li>
+                  <li style="display: inline;">
+                    <img id="img" src="piano.jpg" width="50" height="50" alt="VIT quality/">
+                  </li>
+                </ul>
+                <br>
+                <a align="left">
+                  <asdie>
+                  Trinity College London honored me with a prestigious diploma in Drums.
+                  Additionally, <br>I achieved a remarkable Initial grade in Piano from Trinity College London
+                  Beyond my musical accomplishments,<br> I proudly hold the title of a National Level 10m Air Pistol Shooter.
+                  During the Nationals Competition in 2019,<br> I demonstrated my shooting prowess by securing the 425th position nationwide.</h3>
+                  </aside>
+                <a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </font>
+  <footer style="text-align:center;">
+    <p id="h3">Author: Anant Jain
+    <br> Registration Number : 22BCE0282
+    <br>
+    <a id="h3" href="mailto:anant.jain2022a@vitstudent.ac.in">anant.jain2022a@vitstudent.ac.in</a>
+      <br>
+      <a id="h3" href="https://in.linkedin.com/in/anant-jain-9bb81a212">Linkedin</a>
+    </p>
+  </footer>
+</body>
+
+</html>

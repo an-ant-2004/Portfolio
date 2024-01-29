@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web Page</title>
+  <style>
+    .navbar {
+  overflow: hidden;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+    a:link {
+        color: rgb(0, 0, 0);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:visited 
+    {
+        color: rgb(0, 51, 123);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    body {
+      background-image: url('marble.jpg');
+      background-color: rgb(0, 225, 255);
+      text-align: center;
+    }
+
+    #h3 {
+      color: aliceblue;
+    }
+
+    #h31 {
+      color: rgb(0, 0, 0);
+    }
+
+    #img1 {
+      border-radius: 20%;
+    }
+
+    #img {
+      border-radius: 50%;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .text {
+      padding-left: 20px;
+    }
+
+    font {
+      color: aliceblue;
+    }
+
+    button {
+      background-color: rgb(122, 122, 122);
+      color: white;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .edubox {
+      border: 4px solid rgb(255, 255, 255);
+      padding: 10px;
+    }
+
+    h2 {
+      font-size: xx-large;
+    }
+
+    .mainc {
+      font-size: larger;
+    }
+
+    .pclass {
+      color: green;
+    }
+    #img12
+    {
+      float:left;
+      border-radius: 20%;
+    }
+
+    #si {
+      font-size: 16px;
+    }
+
+    #abc {
+      color: red;
+    }
+
+    ul,
+    ol {
+      list-style-type: none;
+      margin-left: 0;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      var documentE1 = $(document),
+          fadeElem = $('.fade-scroll');
+  
+      documentE1.on('scroll', function () {
+        var currScrollPos = documentE1.scrollTop();
+        fadeElem.each(function () {
+          var $this = $(this),
+              elemOffsetTop = $this.offset().top;
+          if (currScrollPos > elemOffsetTop) {
+            $this.css('opacity', 1 - (currScrollPos - elemOffsetTop) / 250);
+          } else {
+            $this.css('opacity', 1);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+<body style="background-color: rgb(0, 157, 255); font-size: 33px;">
+
+  <font face="arial, helvetica" size="3" color="black">
+    <br>
+    <br>
+    <h2> Welcome to my Webpage !</h2>
+    <hr size="5px">
+    <div class="navbar">
+    <a >
+      <h3 id="h31" style="text-align:center;background-color: rgb(255, 255, 255);">
+        
+        <br>
+        <ul style="display: inline;">
+            
+            <li style="display: inline;"><a href="about.html#About#Me">About Me</a>
+            <li style="display: inline;"><a href="about.html#College">College</a>
+            <li style="display: inline;"><a href="about.html#Schooling">Schooling</a>
+            <li style="display: inline;"><a href="about.html#Hobbies">Achievements</a>
+                
+        </ul>
+        <p><br></p>
+      </h3>
+    </a>
+    </div>
+    
+    <header>
+    <h1 class="fade-scroll">
+        <hr width="30%">PORTFOLIO
+        <br>
+        <hr width="30%">
+      </h1>
+    </header>
+    <img id="img" src="anant.jpeg" width="220" height="250" align="canter">
+    <p>Hello Everyone, My name is Anant Jain and this is my Portoflio.
+      <br> This is the homepage of my website.
+      <br> The Navigation Bar will direct you to the About me Section of the Main Website.
+    </p>
+    <footer style="text-align:center;">
+      <p id="h3">Author: Anant Jain
+      <br> Registration Number : 22BCE0282
+      <br>
+      <a id="h3" href="mailto:anant.jain2022a@vitstudent.ac.in">anant.jain2022a@vitstudent.ac.in</a>
+        <br>
+        <a id="h3" href="https://in.linkedin.com/in/anant-jain-9bb81a212">Linkedin</a>
+        <br>
+        <a id="h3" href="https://github.com/an-ant-2004/Portfolio/upload/main">Github</a>
+      </p>
+    
+  </footer>
+  </font>
+</body>
+
+</html>
